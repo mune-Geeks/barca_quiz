@@ -2,8 +2,10 @@ import 'package:barca_quiz/font_setting/main_fonts.dart';
 import 'package:flutter/material.dart';
 
 class StartScreen extends StatelessWidget {
+  // startQuizはswitchScreenを実行する
   const StartScreen(this.startQuiz, {super.key});
 
+  // コンストラクタ
   final void Function() startQuiz;
 
   @override

@@ -55,8 +55,11 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
               const SizedBox(
                 height: 30,
               ),
+
+              // 選択肢の提示。リストでわたってきた個数分ボタンを生成している。
               ...currentQuestion.getShuffledAnswers().map((answer) {
                 // ...はスプレット構文、map型だけど無視して以下のAnswer buttonが採用される
+                // ※追記 無視ではない。リスト型をバラす必要がある。
                 return AnswerButton(
                   answerText: answer,
                   onTap: () {

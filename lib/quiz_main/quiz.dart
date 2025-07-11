@@ -4,6 +4,7 @@ import 'package:barca_quiz/quiz_main/start_screen.dart';
 import 'package:flutter/material.dart';
 
 class Quiz extends StatefulWidget {
+  // コンストラクタ
   const Quiz({super.key});
 
   @override
@@ -14,8 +15,9 @@ class Quiz extends StatefulWidget {
 
 class _QuizState extends State<Quiz> {
   List<String> selectedAnswers = [];
-  var activeScreen = 'start-screen';
 
+
+  var activeScreen = 'start-screen';
   switchScreen() {
     setState(() {
       activeScreen = 'questions-screen';
@@ -24,7 +26,6 @@ class _QuizState extends State<Quiz> {
 
   void chooseAnswer(String answer) {
     selectedAnswers.add(answer);
-
     if (selectedAnswers.length == questions.length){
       setState(() {
         selectedAnswers = [];
@@ -36,7 +37,6 @@ class _QuizState extends State<Quiz> {
   @override
   Widget build(BuildContext context) {
     Widget screenWidget = StartScreen(switchScreen);
-
     if(activeScreen == 'questions-screen') {
       screenWidget = QuestionsScreen(onSelectAnswer: chooseAnswer);
     }
