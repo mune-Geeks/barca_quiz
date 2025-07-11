@@ -13,7 +13,7 @@ class ResultsScreen extends StatelessWidget {
       child: Container(
         margin: const EdgeInsets.all(40),
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center, // メイン軸に沿って子要素をどう調整するのか
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
               'You answered X out of Y questions correctly!',
