@@ -23,7 +23,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
   void answerQuestion(String selectedAnswer) {
     widget.onSelectAnswer(selectedAnswer);
     setState(() {
-      currentQuestionIndex++; // setStateで画面を切り替える
+      currentQuestionIndex++; // ページ遷移時に使用する
     });
   }
 
